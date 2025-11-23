@@ -14,3 +14,88 @@ case_id,created_at,merchant_name,issue_category,issue_subcategory,description,re
 1013,2023-10-05 11:00,Pizza Palace,Operational,Supplies,"Order box of thermal paper.",5,Closed
 1014,2023-10-05 12:30,Sushi Spot,Hardware,Device Failure,"Touchscreen on main register not responding.",90,Escalated
 1015,2023-10-06 09:00,Joe's Diner,Network,Connectivity,"Intermittent lag when sending orders to kitchen.",55,Closed
+1016,2023-10-06 09:45,Pasta Place,Operational,Menu,"Add gluten-free option to pasta menu.",12,Closed
+1017,2023-10-06 10:30,Taco Fiesta,Hardware,Printer,"Bar printer printing blank tickets.",40,Closed
+1018,2023-10-06 11:15,Burger Barn,Network,Connectivity,"Wi-Fi signal weak in kitchen area.",45,Closed
+1019,2023-10-06 12:00,The Steakhouse,Operational,Reports,"Monthly sales report not generating.",25,Closed
+1020,2023-10-06 13:30,Cafe Mocha,Operational,Supplies,"Need ink ribbons for kitchen printer.",8,Closed
+1021,2023-10-07 08:45,Pizza Palace,Hardware,Device Failure,"Card reader not reading chip cards.",110,Escalated
+1022,2023-10-07 09:30,Sushi Spot,Operational,Menu,"Update sushi roll prices.",15,Closed
+1023,2023-10-07 10:15,Joe's Diner,Hardware,Printer,"Receipt printer out of paper.",5,Closed
+1024,2023-10-07 11:00,Pasta Place,Network,Connectivity,"POS system freezing due to network lag.",50,Closed
+1025,2023-10-07 12:45,Taco Fiesta,Operational,Reports,"Need help exporting sales data to Excel.",20,Closed
+1026,2023-10-07 14:30,Burger Barn,Hardware,Installation,"Install new cash drawer.",60,Scheduled
+1027,2023-10-08 09:00,The Steakhouse,Operational,Menu,"Add holiday specials to menu.",10,Closed
+1028,2023-10-08 09:45,Cafe Mocha,Hardware,Printer,"Printer offline after power outage.",30,Closed
+1029,2023-10-08 10:30,Pizza Palace,Network,Connectivity,"Cannot process credit cards, offline mode.",40,Closed
+1030,2023-10-08 11:15,Sushi Spot,Operational,Supplies,"Order receipt paper and ribbons.",5,Closed
+1031,2023-10-08 12:00,Joe's Diner,Hardware,Device Failure,"Scanner not scanning barcodes.",80,Escalated
+1032,2023-10-08 13:45,Pasta Place,Operational,Menu,"Remove discontinued items.",8,Closed
+1033,2023-10-09 08:30,Taco Fiesta,Hardware,Printer,"Kitchen printer printing gibberish.",45,Closed
+1034,2023-10-09 09:15,Burger Barn,Operational,Reports,"Sales tax calculation seems incorrect.",35,Closed
+1035,2023-10-09 10:00,The Steakhouse,Network,Connectivity,"Guest Wi-Fi interfering with POS network.",55,Closed
+1036,2023-10-09 11:45,Cafe Mocha,Operational,Menu,"Update coffee prices.",10,Closed
+1037,2023-10-09 12:30,Pizza Palace,Hardware,Installation,"Mount kitchen display system.",150,Scheduled
+1038,2023-10-09 13:15,Sushi Spot,Operational,Supplies,"Need thermal paper rolls ASAP.",5,Closed
+1039,2023-10-10 09:00,Joe's Diner,Hardware,Printer,"Printer cover stuck open.",20,Closed
+1040,2023-10-10 09:45,Pasta Place,Network,Connectivity,"POS terminal disconnected from server.",60,Closed
+1041,2023-10-10 10:30,Taco Fiesta,Operational,Menu,"Add new taco combo.",12,Closed
+1042,2023-10-10 11:15,Burger Barn,Hardware,Device Failure,"Cash drawer not opening automatically.",70,Escalated
+1043,2023-10-10 12:00,The Steakhouse,Operational,Reports,"Need customized sales report.",25,Closed
+1044,2023-10-10 13:45,Cafe Mocha,Hardware,Printer,"Printer making loud noise.",40,Closed
+1045,2023-10-11 08:30,Pizza Palace,Network,Connectivity,"Internet slow, card processing delayed.",50,Closed
+1046,2023-10-11 09:15,Sushi Spot,Operational,Menu,"Update lunch special hours.",8,Closed
+1047,2023-10-11 10:00,Joe's Diner,Operational,Supplies,"Order printer ribbons.",5,Closed
+1048,2023-10-11 11:45,Pasta Place,Hardware,Installation,"Install additional terminal at bar.",120,Scheduled
+1049,2023-10-11 12:30,Taco Fiesta,Hardware,Printer,"Printer not connecting to network.",55,Closed
+1050,2023-10-11 13:15,Burger Barn,Operational,Reports,"Employee hours report missing data.",30,Closed
+1051,2023-10-12 09:00,The Steakhouse,Network,Connectivity,"Firewall blocking POS traffic.",65,Closed
+1052,2023-10-12 09:45,Cafe Mocha,Operational,Menu,"Add pumpkin spice latte.",10,Closed
+1053,2023-10-12 10:30,Pizza Palace,Hardware,Device Failure,"Customer display screen blank.",90,Escalated
+1054,2023-10-12 11:15,Sushi Spot,Operational,Supplies,"Need more receipt paper.",5,Closed
+1055,2023-10-12 12:00,Joe's Diner,Hardware,Printer,"Printer jamming on long orders.",45,Closed
+1056,2023-10-12 13:45,Pasta Place,Network,Connectivity,"Local network switch failed.",75,Closed
+1057,2023-10-13 08:30,Taco Fiesta,Operational,Menu,"Remove breakfast items.",8,Closed
+1058,2023-10-13 09:15,Burger Barn,Operational,Reports,"Refunds not showing in daily report.",25,Closed
+1059,2023-10-13 10:00,The Steakhouse,Hardware,Installation,"Move POS station to new counter.",100,Scheduled
+1060,2023-10-13 11:45,Cafe Mocha,Hardware,Printer,"Printer test page works but orders don't.",50,Closed
+1061,2023-10-13 12:30,Pizza Palace,Network,Connectivity,"Cannot ping payment gateway.",60,Closed
+1062,2023-10-13 13:15,Sushi Spot,Operational,Menu,"Change price of sashimi platter.",10,Closed
+1063,2023-10-14 09:00,Joe's Diner,Operational,Supplies,"Order thermal paper rolls.",5,Closed
+1064,2023-10-14 09:45,Pasta Place,Hardware,Device Failure,"Credit card reader buttons sticking.",85,Escalated
+1065,2023-10-14 10:30,Taco Fiesta,Hardware,Printer,"Printer offline light blinking.",35,Closed
+1066,2023-10-14 11:15,Burger Barn,Network,Connectivity,"Router needs reboot often.",40,Closed
+1067,2023-10-14 12:00,The Steakhouse,Operational,Reports,"Weekly sales summary incorrect.",30,Closed
+1068,2023-10-14 13:45,Cafe Mocha,Operational,Menu,"Add holiday drinks.",12,Closed
+1069,2023-10-15 08:30,Pizza Palace,Hardware,Installation,"Setup new handheld ordering device.",90,Scheduled
+1070,2023-10-15 09:15,Sushi Spot,Hardware,Printer,"Printer cutting paper too short.",25,Closed
+1071,2023-10-15 10:00,Joe's Diner,Network,Connectivity,"Wi-Fi password changed, POS offline.",20,Closed
+1072,2023-10-15 11:45,Pasta Place,Operational,Menu,"Update wine list.",15,Closed
+1073,2023-10-15 12:30,Taco Fiesta,Operational,Supplies,"Need ink for kitchen printer.",8,Closed
+1074,2023-10-15 13:15,Burger Barn,Hardware,Device Failure,"POS terminal overheating.",100,Escalated
+1075,2023-10-16 09:00,The Steakhouse,Hardware,Printer,"Printer ribbon tangled.",15,Closed
+1076,2023-10-16 09:45,Cafe Mocha,Network,Connectivity,"ISP outage in area.",120,Closed
+1077,2023-10-16 10:30,Pizza Palace,Operational,Reports,"Need audit log for last month.",35,Closed
+1078,2023-10-16 11:15,Sushi Spot,Operational,Menu,"Add description to sushi rolls.",10,Closed
+1079,2023-10-16 12:00,Joe's Diner,Hardware,Installation,"Replace old receipt printer.",60,Scheduled
+1080,2023-10-16 13:45,Pasta Place,Operational,Supplies,"Order box of paper.",5,Closed
+1081,2023-10-17 08:30,Taco Fiesta,Hardware,Printer,"Printer not responding to print command.",40,Closed
+1082,2023-10-17 09:15,Burger Barn,Network,Connectivity,"Network cable unplugged.",10,Closed
+1083,2023-10-17 10:00,The Steakhouse,Operational,Menu,"Change dinner menu layout.",20,Closed
+1084,2023-10-17 11:45,Cafe Mocha,Hardware,Device Failure,"Touchscreen calibration off.",50,Escalated
+1085,2023-10-17 12:30,Pizza Palace,Operational,Reports,"Sales by hour report needed.",15,Closed
+1086,2023-10-17 13:15,Sushi Spot,Hardware,Printer,"Printer printing faint text.",30,Closed
+1087,2023-10-18 09:00,Joe's Diner,Network,Connectivity,"POS lag during peak hours.",55,Closed
+1088,2023-10-18 09:45,Pasta Place,Operational,Menu,"Add new appetizers.",12,Closed
+1089,2023-10-18 10:30,Taco Fiesta,Operational,Supplies,"Low on thermal paper.",5,Closed
+1090,2023-10-18 11:15,Burger Barn,Hardware,Installation,"Install new kitchen buzzer.",45,Scheduled
+1091,2023-10-18 12:00,The Steakhouse,Hardware,Printer,"Printer paper jam.",15,Closed
+1092,2023-10-18 13:45,Cafe Mocha,Network,Connectivity,"Cannot connect to cloud server.",60,Closed
+1093,2023-10-19 08:30,Pizza Palace,Operational,Menu,"Update pizza toppings.",10,Closed
+1094,2023-10-19 09:15,Sushi Spot,Operational,Reports,"Need sales report for accountant.",20,Closed
+1095,2023-10-19 10:00,Joe's Diner,Hardware,Device Failure,"Power button broken on terminal.",90,Escalated
+1096,2023-10-19 11:45,Pasta Place,Hardware,Printer,"Printer error code 404.",40,Closed
+1097,2023-10-19 12:30,Taco Fiesta,Network,Connectivity,"Wi-Fi dropped connection.",30,Closed
+1098,2023-10-19 13:15,Burger Barn,Operational,Supplies,"Order printer ink.",8,Closed
+1099,2023-10-20 09:00,The Steakhouse,Operational,Menu,"Remove old specials.",5,Closed
+1100,2023-10-20 09:45,Cafe Mocha,Hardware,Installation,"Setup customer loyalty tablet.",75,Scheduled
