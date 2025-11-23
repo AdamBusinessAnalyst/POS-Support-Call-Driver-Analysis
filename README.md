@@ -1,48 +1,52 @@
-Point of Sale Support Call Driver Analysis
+# Point of Sale Support Call Driver Analysis
 
-This project breaks down POS support ticket data to understand what’s driving the workload and how to reduce it. The analysis focuses on ticket volume, resolution times, and the issues that take the most effort. Everything is done using Python and SQL.
+This project analyzes POS support ticket data to understand what drives the workload and how to reduce it. The focus is on ticket volume, resolution times, and the issues that require the most effort. The work is done using Python and SQL.
 
-- Project Goal:
+---
 
-Identify the real causes behind high support volume and long handle times, then suggest practical steps to improve support efficiency.
+## Project Goal
 
-- What was found:
-1. Hardware issues are the biggest bottleneck
+Identify the main causes of high support volume and long handle times, then provide practical steps to improve support efficiency.
 
-Printer and card reader problems account for about half of all tickets and take three times longer to resolve compared to simple operational tasks. This is the biggest contributor to high AHT.
+---
 
-2. Small requests add unnecessary load
+## What Was Found
 
-Menu changes, supply orders, and other quick fixes are low-complexity, but they show up in high volume and clutter the queue.
+### **Hardware issues are the biggest bottleneck**
+Printer and card reader issues make up about **half of all tickets** and take **three times longer** to resolve than simple operational tasks. These drive most of the high AHT.
 
-What can be improved:
-1. Reduce operational volume
+### **Small requests add unnecessary load**
+Menu changes, supply orders, and other quick fixes are simple but appear in high volume, cluttering the queue.
 
-Build a simple Self-Service Menu Manager where merchants can update menus and order supplies. This could deflect up to 30% of all tickets, letting agents focus on real technical issues.
+---
 
-2. Cut hardware resolution time
+## What Can Be Improved
 
-Give the support agents tailored troubleshooting training specifically for printers and connectivity problems. Clearer decision trees can bring down time spent on these cases.
+### **Reduce operational volume**
+Create a simple **Self-Service Menu Manager** so merchants can update menus and order supplies themselves. This could deflect up to **30% of all tickets**, freeing agents for more technical issues.
 
-🛠 Tech Used
+### **Cut hardware resolution time**
+Provide targeted troubleshooting training for **printers and connectivity issues**. Clearer decision trees will reduce the time agents spend on these cases.
 
-Python (Pandas)
+---
 
-Code Summary
+## Tech Used
 
-The script does four things:
+- Python (Pandas)
 
-Loads ticket data
+---
 
-Finds the most common issues
+## 💻 Code Summary
 
-Calculates average resolution times
+The script performs four main tasks:
 
-Highlights high-impact issues that are both frequent and slow to fix
+1. Loads ticket data  
+2. Identifies the most common issues  
+3. Calculates average resolution times  
+4. Highlights high-impact issues (high volume + long resolution time)
 
-Here’s the main analysis logic:
+Below is the core analysis logic written in Python using pandas.
 
-The core analysis is performed using Python and the pandas library.
 
 ```python
 import pandas as pd
@@ -79,4 +83,16 @@ slowest_issue = efficiency_analysis.idxmax()
 
 print(f"1. High Volume: '{high_volume_issue}' is the most common issue. Consider self-service options.")
 print(f"2. High Effort: '{slowest_issue}' issues take the longest. Improve agent training here.")
+
+Project Structure:
+
+POS-Support-Call-Driver-Analysis/
+│
+├── data/
+│   └── mock_pos_data.csv
+│
+├── analysis/
+│   └── pos_call_driver_analysis.py
+│
+└── README.md
 
