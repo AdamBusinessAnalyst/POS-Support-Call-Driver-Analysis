@@ -1,0 +1,16 @@
+case_id,created_at,merchant_name,issue_category,issue_subcategory,description,resolution_time_min,status
+1001,2023-10-01 08:30,Joe's Diner,Hardware,Printer,"Kitchen printer offline, not printing orders.",45,Closed
+1002,2023-10-01 09:15,Taco Fiesta,Network,Connectivity,"POS station 2 cannot connect to Wi-Fi.",60,Closed
+1003,2023-10-01 10:00,Burger Barn,Operational,Menu,"Need to add 'Spicy Burger' to the lunch menu.",15,Closed
+1004,2023-10-01 11:45,The Steakhouse,Hardware,Device Failure,"Card reader screen is cracked, need a swap.",120,Escalated
+1005,2023-10-02 08:10,Cafe Mocha,Operational,Supplies,"Running low on receipt paper rolls, need to order.",10,Closed
+1006,2023-10-02 09:30,Pizza Palace,Hardware,Printer,"Receipt printer jamming repeatedly.",50,Closed
+1007,2023-10-02 13:20,Sushi Spot,Operational,Reports,"End of day report totals don't match batch.",30,Closed
+1008,2023-10-03 09:00,Taco Fiesta,Hardware,Installation,"Need onsite tech to install new patio terminal.",180,Scheduled
+1009,2023-10-03 14:45,Joe's Diner,Operational,Menu,"Change price of Coffee from $2 to $3.",5,Closed
+1010,2023-10-04 08:00,Burger Barn,Network,Connectivity,"Internet down at store, POS in offline mode.",40,Closed
+1011,2023-10-04 10:15,Cafe Mocha,Hardware,Printer,"Printer not cutting paper properly.",35,Closed
+1012,2023-10-04 16:00,The Steakhouse,Operational,Menu,"Remove seasonal specials from dinner menu.",10,Closed
+1013,2023-10-05 11:00,Pizza Palace,Operational,Supplies,"Order box of thermal paper.",5,Closed
+1014,2023-10-05 12:30,Sushi Spot,Hardware,Device Failure,"Touchscreen on main register not responding.",90,Escalated
+1015,2023-10-06 09:00,Joe's Diner,Network,Connectivity,"Intermittent lag when sending orders to kitchen.",55,Closed
