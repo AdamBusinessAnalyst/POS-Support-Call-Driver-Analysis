@@ -1,35 +1,58 @@
+import sys
+
 import pandas as pd
 
-# 1. Load the Data
-try:
-    df = pd.read_csv('mock_pos_data.csv')
-    print("Data loaded successfully.\n")
-except FileNotFoundError:
-    print("Error: 'mock_pos_data.csv' not found.")
-    exit()
+DATA_FILE = "mock_pos_data.csv"
 
-# 2. Analyze Top Call Drivers (Volume)
-print("--- Top Call Drivers (By Subcategory) ---")
-# counting specific issues like 'Printer', 'Menu', 'Connectivity'
-volume_analysis = df['issue_subcategory'].value_counts()
-print(volume_analysis)
 
-# 3. Analyze Efficiency (Average Resolution Time)
-print("\n--- Avg Resolution Time (Minutes) by Category ---")
-# Determining if Hardware issues take longer than Operational ones
-efficiency_analysis = df.groupby('issue_category')['resolution_time_min'].mean().round(1)
-print(efficiency_analysis)
+def main() -> None:
+    try:
+        df = pd.read_csv(DATA_FILE)
+    except FileNotFoundError:
+        print(f"Error: '{DATA_FILE}' not found.")
+        sys.exit(1)
+    print(f"Loaded {len(df)} tickets.\n")
 
-# 4. Identify "High Impact" Issues
-# Issues that are frequent AND take a long time (High Volume + High Effort)
-print("\n--- High Impact Issues (Avg Time per Subcategory) ---")
-impact_analysis = df.groupby('issue_subcategory')['resolution_time_min'].mean().sort_values(ascending=False)
-print(impact_analysis)
+    print("--- Top Call Drivers (share of tickets by subcategory) ---")
+    volume = df["issue_subcategory"].value_counts()
+    print((volume / len(df) * 100).round(1).astype(str) + "%")
 
-# 5. Recommendation Logic based on findings
-print("\n--- Automated Recommendations ---")
-high_volume_issue = volume_analysis.idxmax()
-slowest_issue = efficiency_analysis.idxmax()
+    print("\n--- Avg Resolution Time (minutes) by Category ---")
+    efficiency = (
+        df.groupby("issue_category")["resolution_time_min"].mean().round(1)
+    )
+    print(efficiency)
 
-print(f"1. High Volume: '{high_volume_issue}' is the most common issue. Consider self-service tools or automation.")
-print(f"2. High Effort: '{slowest_issue}' issues take the longest to resolve. Consider targeted agent training.")
+    print("\n--- Share of Total Agent Time by Category ---")
+    time_share = (
+        df.groupby("issue_category")["resolution_time_min"].sum()
+        / df["resolution_time_min"].sum()
+        * 100
+    )
+    print(time_share.round(1).astype(str) + "%")
+
+    print("\n--- High Impact Issues (avg minutes per subcategory) ---")
+    impact = (
+        df.groupby("issue_subcategory")["resolution_time_min"]
+        .mean()
+        .sort_values(ascending=False)
+    )
+    print(impact.round(1))
+
+    print("\n--- Automated Recommendations ---")
+    top_volume = volume.idxmax()
+    slowest = efficiency.idxmax()
+    fastest = efficiency.idxmin()
+    ratio = efficiency[slowest] / efficiency[fastest]
+    print(
+        f"1. High volume: '{top_volume}' is the most common issue. "
+        "Consider self-service tools or automation."
+    )
+    print(
+        f"2. High effort: '{slowest}' tickets take {ratio:.1f}x longer than "
+        f"'{fastest}' ones. Consider targeted troubleshooting guides."
+    )
+
+
+if __name__ == "__main__":
+    main()

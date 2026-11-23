@@ -1,82 +1,47 @@
-# Point of Sale Support Call Driver Analysis
+# POS Support Call Driver Analysis
 
-> **Data Notice:** All data in `mock_pos_data.csv` is entirely synthetic and was programmatically generated for demonstration purposes. It does not represent real customers, transactions, or business records.
+What drives support workload for a restaurant POS product, and where is agent time going?
 
-This project analyzes POS support ticket data to understand what drives the workload and how to reduce it. The focus is on ticket volume, resolution times, and the issues that require the most effort.
+> **Data notice:** `mock_pos_data.csv` is synthetic (100 tickets). It does not represent real customers or business records.
 
----
+## Key findings
 
-## Project Goal
+| Metric | Hardware | Network | Operational |
+|---|---|---|---|
+| Share of tickets | 38% | 19% | 43% |
+| Avg resolution time | 63.8 min | 52.1 min | 13.5 min |
+| Share of total agent time | **60.7%** | 24.8% | 14.5% |
 
-Identify the main causes of high support volume and long handle times, then provide practical steps to improve support efficiency.
+- **Hardware is the bottleneck.** 38% of tickets but 61% of agent time. Hardware tickets take **4.7x longer** than operational ones.
+- **Printer and device failures** together are 29% of all tickets. Installations are rare (9%) but the slowest at ~98 min each.
+- **Menu changes and supply orders** are 32% of tickets but take 6–11 min each: high volume, low effort, easy to self-serve.
 
----
+## Recommendations
 
-## What Was Found
+1. **Self-service menu manager + supply ordering** — targets the 32% of tickets that are routine merchant requests.
+2. **Hardware troubleshooting decision trees** for printers and card readers — targets the category that consumes 61% of agent time.
+3. **Pre-install checklist** for merchants — installations are the single slowest ticket type.
 
-### Hardware issues are the biggest bottleneck
-Printer and card reader issues make up about **half of all tickets** and take **three times longer** to resolve than simple operational tasks.
+## Run it
 
-### Small requests add unnecessary load
-Menu changes, supply orders, and other quick fixes are simple but appear in high volume, cluttering the queue.
+```bash
+pip install -r requirements.txt
+python POS_Analysis.py
+```
 
----
+The script prints ticket share by subcategory, average resolution time and share of agent time by category, the highest-effort subcategories, and two auto-generated recommendations.
 
-## What Can Be Improved
+## Tech
 
-### Reduce operational volume
-Create a **Self-Service Menu Manager** so merchants can update menus and order supplies themselves. This could deflect up to **30% of all tickets**, freeing agents for more technical issues.
+Python, pandas. CI runs flake8 and executes the script on every push.
 
-### Cut hardware resolution time
-Provide targeted troubleshooting guides for printers and connectivity issues. Clearer decision trees reduce the time agents spend on these cases.
+## Structure
 
----
-
-## Tech Used
-
-- Python (Pandas)
-
----
-
-## Code Summary
-
-The script performs four main tasks:
-
-1. Loads ticket data
-2. Identifies the most common issues
-3. Calculates average resolution times
-4. Highlights high-impact issues (high volume + long resolution time)
-
-\`\`\`python
-import pandas as pd
-
-df = pd.read_csv('mock_pos_data.csv')
-
-# Volume analysis
-volume_analysis = df['issue_subcategory'].value_counts()
-
-# Resolution time by category
-efficiency_analysis = df.groupby('issue_category')['resolution_time_min'].mean().round(1)
-
-# High-impact issues
-impact_analysis = df.groupby('issue_subcategory')['resolution_time_min'].mean().sort_values(ascending=False)
-
-# Automated recommendations
-high_volume_issue = volume_analysis.idxmax()
-slowest_issue = efficiency_analysis.idxmax()
-print(f"High Volume: '{high_volume_issue}' — consider self-service options.")
-print(f"High Effort: '{slowest_issue}' — improve agent training here.")
-\`\`\`
-
----
-
-## Project Structure
-
-\`\`\`
+```
 POS-Support-Call-Driver-Analysis/
-├── .github/workflows/
-│   └── python-app.yml
+├── .github/workflows/python-app.yml
 ├── POS_Analysis.py
 ├── mock_pos_data.csv
+├── requirements.txt
 └── README.md
-\`\`\`
+```
